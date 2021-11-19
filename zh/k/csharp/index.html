@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="ONBON Team">
+        <link rel="canonical" href="https://doc.onbonbx.com/zh/k/csharp/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>C# SDK 使用说明 - 字库系列 - ONBON Docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-274394082"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-274394082');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">ONBON Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">主页</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">全彩播放器系列 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../y/y/" class="dropdown-item">开发指南</a>
+</li>
+                                    
+<li>
+    <a href="../../y/java/" class="dropdown-item">JAVA</a>
+</li>
+                                    
+<li>
+    <a href="../../y/c/" class="dropdown-item">C/C++</a>
+</li>
+                                    
+<li>
+    <a href="../../y/csharp/" class="dropdown-item">C#</a>
+</li>
+                                    
+<li>
+    <a href="../../y/potocol/" class="dropdown-item">开发协议</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">单双色系列 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../dual/dual/" class="dropdown-item">开发指南</a>
+</li>
+                                    
+<li>
+    <a href="../../dual/java/" class="dropdown-item">JAVA</a>
+</li>
+                                    
+<li>
+    <a href="../../dual/c/" class="dropdown-item">C/C++</a>
+</li>
+                                    
+<li>
+    <a href="../../y/csharp/" class="dropdown-item">C#</a>
+</li>
+                                    
+<li>
+    <a href="../../dual/potocol/" class="dropdown-item">开发协议</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">字库系列 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../k/" class="dropdown-item">开发指南</a>
+</li>
+                                    
+<li>
+    <a href="../java/" class="dropdown-item">JAVA</a>
+</li>
+                                    
+<li>
+    <a href="../c/" class="dropdown-item">C/C++</a>
+</li>
+                                    
+<li>
+    <a href="../../y/csharp/" class="dropdown-item">C#</a>
+</li>
+                                    
+<li>
+    <a href="../potocol/" class="dropdown-item">开发协议</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">常用工具 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../tool/wireshark/" class="dropdown-item">网络抓包</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/about/" class="nav-link">关于我们</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/onbonlab/onbonlab.github.io.git/edit/master/docs/zh/k/csharp.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#c-sdk-" class="nav-link">C# SDK 使用说明 - 字库系列</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#1" class="nav-link">1. 平台支持</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2-sdk" class="nav-link">2. 获取 SDK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3" class="nav-link">3 错误码及说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3_1" class="nav-link">3 显示屏初始化说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4-api" class="nav-link">4 API调用顺序</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="c-sdk-">C# SDK 使用说明 - 字库系列<a class="headerlink" href="#c-sdk-" title="Permanent link"></a></h1>
+<h2 id="1">1. 平台支持<a class="headerlink" href="#1" title="Permanent link"></a></h2>
+<p>本项目由C++编写接口，C#封装一层C++接口， 因此，其可以正常运行于Windows平台。本文档主要针对动态链接库（C#）开发的相关说明，需要协议开发请使用我们提供的<a href="../potocol/">协议文档</a>进行开发。
+如果你想尽快开发出一个能简单控制的软件，建议按以下流程阅读本文档后进行软件开发。</p>
+<ul>
+<li>获取SDK</li>
+<li>阅读错误码及说明</li>
+<li>阅读API调用顺序</li>
+<li>阅读函数说明</li>
+</ul>
+<h2 id="2-sdk">2. 获取 SDK<a class="headerlink" href="#2-sdk" title="Permanent link"></a></h2>
+<p>您可以从以下链接下载本 SDK：</p>
+<p>https://github.com/onbonlab/bx.k.java.git</p>
+<h2 id="3">3 错误码及说明<a class="headerlink" href="#3" title="Permanent link"></a></h2>
+<p>动态库中每个接口函数最后都返回函数执行结果，用户可根据函数执行结果查找判断该函数的执行情况。</p>
+<h3 id="21"><em>2.1错误状态</em><a class="headerlink" href="#21" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th>错误名称</th>
+<th>代码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERR_NO</td>
+<td>0</td>
+<td>没有错误</td>
+</tr>
+<tr>
+<td>ERR_OUTOFGROUP</td>
+<td>1</td>
+<td>Command Group Error</td>
+</tr>
+<tr>
+<td>ERR_NOCMD</td>
+<td>2</td>
+<td>Command Not Found</td>
+</tr>
+<tr>
+<td>ERR_BUSY</td>
+<td>3</td>
+<td>The Contorller is busy now</td>
+</tr>
+<tr>
+<td>ERR_MEMORYVOLUME</td>
+<td>4</td>
+<td>Out of the Memory Volume</td>
+</tr>
+<tr>
+<td>ERR_CCHECKSUM</td>
+<td>5</td>
+<td>CRC16 Checksum Error</td>
+</tr>
+<tr>
+<td>ERR_FILENOTEXIST</td>
+<td>6</td>
+<td>File Not Exist</td>
+</tr>
+<tr>
+<td>ERR_FLASH</td>
+<td>7</td>
+<td>Flash Access Error</td>
+</tr>
+<tr>
+<td>ERR_FILE_DOWNLOAD</td>
+<td>8</td>
+<td>File Download Error</td>
+</tr>
+<tr>
+<td>ERR_FILE_NAME</td>
+<td>9</td>
+<td>File Name Error</td>
+</tr>
+<tr>
+<td>ERR_FILE_TYPE</td>
+<td>10</td>
+<td>File Type Error</td>
+</tr>
+<tr>
+<td>ERR_FILE_CRC16</td>
+<td>11</td>
+<td>File CRC16 Error</td>
+</tr>
+<tr>
+<td>ERR_FONT_NOT_EXIST</td>
+<td>12</td>
+<td>Font Library Not Exist</td>
+</tr>
+<tr>
+<td>ERR_FIRMWARE_TYPE</td>
+<td>13</td>
+<td>Firmware Type Error (Check the controller type)</td>
+</tr>
+<tr>
+<td>ERR_DATE_TIME_FORMAT</td>
+<td>14</td>
+<td>Date Time format error</td>
+</tr>
+<tr>
+<td>ERR_FILE_EXIST</td>
+<td>15</td>
+<td>File Exist for File overwrite</td>
+</tr>
+<tr>
+<td>ERR_FILE_BLOCK_NUM</td>
+<td>16</td>
+<td>File block number error</td>
+</tr>
+<tr>
+<td>ERR_COMMUNICATE</td>
+<td>100</td>
+<td>通信失败</td>
+</tr>
+<tr>
+<td>ERR_PROTOCOL</td>
+<td>101</td>
+<td>协议数据不正确</td>
+</tr>
+<tr>
+<td>ERR_TIMEOUT</td>
+<td>102</td>
+<td>通信超时</td>
+</tr>
+<tr>
+<td>ERR_NETCLOSE</td>
+<td>103</td>
+<td>通讯断开</td>
+</tr>
+<tr>
+<td>ERR_INVALID_HAND</td>
+<td>104</td>
+<td>无效句柄</td>
+</tr>
+<tr>
+<td>ERR_PARAMETER</td>
+<td>105</td>
+<td>参数错误</td>
+</tr>
+<tr>
+<td>ERR_SHOULDREPEAT</td>
+<td>106</td>
+<td>需要重复上次的错误包</td>
+</tr>
+<tr>
+<td>ERR_FILE</td>
+<td>107</td>
+<td>无效文件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3_1">3 显示屏初始化说明<a class="headerlink" href="#3_1" title="Permanent link"></a></h2>
+<p>控制器接入动态库使用的系统前需要首先使用我司提供的 LedshowZK2017软件来进行控制卡
+地址、通讯波特率、网络 IP(如有网口)、端口地址(如有网口)、扫描方式等设置；设置好后就可以再接入本动态库的系统中按照之前设定好的相关参数来设定显示屏的其它参数、信息和命令了。</p>
+<h2 id="4-api">4 API调用顺序<a class="headerlink" href="#4-api" title="Permanent link"></a></h2>
+<h3 id="41"><em>4.1总体次序</em><a class="headerlink" href="#41" title="Permanent link"></a></h3>
+<p>在执行其他操作之前，首先执行函数InitSDK初始化动态库，然后选择通讯模式， 设置不同模式
+下的参数，连接控制器(广播模式执行函数CreateBroadCast，网络固定ip模式执行函数CreateClient，
+网络modbus模式执行函数CreateTcpModbus， 485总线模式执行函数CreateComClient， 串口modbus模式执行函数CreateComModbus)，设置网络超时时间执行函数SetTimeout。 之后可以执行图文区节目（发送节目OFS_SendFileData、删除节目OFS_DeleteFile、锁定/解锁节目SCREEN_LockProgram）、动态区节目（发送节目SCREEN_SendDynamicArea、删除节目SCREEN_DelDynamicArea）、开关（强制开关机SCREEN_ForceOnOff，定时开关机SCREEN_TimeTurnOnOff，取消定时开关机SCREEN_CancelTimeOnOff）、固件查询（查询固件信CON_CheckCurrentFirmware，激活固件CON_FirmwareActivate）、控制器状态查询（CON_ControllerStatus）、 （亮度调整SCREEN_SetBrightness，复位CON_Reset， ping CON_PING， 校时CON_SytemClockCorrect） 等操作。例如RS485模式中函数的调用：</p>
+<pre><code class="language-flow">​```flow
+st=&gt;start: InitSdk
+op=&gt;operation: CreateBroadCast CreateComModbus CreateClient  CreateTcpModbus CreateComClient 创建连接
+cond=&gt;condition:  sendprogram or senddynamic?
+op1=&gt;operation: OFS_SendFileData 发送数据
+op2=&gt;operation: SendDynamicArea发送动态区
+op3=&gt;operation: SendProgram发送节目
+op4=&gt;operation: Destroy销毁通讯
+e=&gt;end: ReleaseSdk
+st-&gt;op-&gt;cond
+cond(yes)-&gt;op1-&gt;op3
+cond(no)-&gt;op2
+op2-&gt;op4
+op3-&gt;op4
+op4-&gt;e
+​```
+</code></pre>
+<pre><code>​```flow
+st=&gt;start: Start:&gt;http://www.google.com[blank]
+e=&gt;end:&gt;http://www.google.com
+op1=&gt;operation: My Operation
+sub1=&gt;subroutine: My Subroutine
+cond=&gt;condition: Yes
+or No?:&gt;http://www.google.com
+io=&gt;inputoutput: catch something...
+
+st-&gt;op1-&gt;cond
+cond(yes)-&gt;io-&gt;e
+cond(no)-&gt;sub1(right)-&gt;op1
+​```
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright ? 2020 onbon. All rights reserved. </p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
