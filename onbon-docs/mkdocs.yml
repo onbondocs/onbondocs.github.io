@@ -26,13 +26,13 @@ nav:
         - 开发指南: zh/dual/dual.md
         - JAVA: zh/dual/java.md
         - C/C++: zh/dual/c.md
-        - C#: zh/y/csharp.md
+        - C#: zh/dual/csharp.md
         - 开发协议: zh/dual/potocol.md
     - 字库系列:
         - 开发指南: zh/k/k.md
         - JAVA: zh/k/java.md
         - C/C++: zh/k/c.md
-        - C#: zh/y/csharp.md
+        - C#: zh/k/csharp.md
         - 开发协议: zh/k/potocol.md
     - 常用工具:
         - 网络抓包: zh/tool/wireshark.md
@@ -47,6 +47,22 @@ markdown_extensions:
     - admonition
     - attr_list
     - def_list
+    - pymdownx.superfences:
+        custom_fences: [
+            {name: flow, class: uml-flowchart}
+           ,{name: sequence, class: uml-sequence-diagram}
+           ,{name: mermaid, class: mermaid}
+        ]
+
+
+extra_javascript:
+    - js/raphael-min.js
+    - js/underscore-min.js
+    - js/sequence-diagram-min.js
+    - js/flowchart-min.js
+    - js/uml-converter.js
+    - js/flow-loader.js
+    - js/sequence-loader.js
   
 extra:
   search:
